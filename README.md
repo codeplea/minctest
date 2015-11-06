@@ -9,7 +9,17 @@ Basically, it implements assertion and equal functions. It'll track and time
 how many tests pass and fail. Failed tests will also display which line the
 failing test code was on.
 
-##Example:
+##Features
+
+- **ANSI C with no dependencies**.
+- Single header file.
+- Reports file and line number for failed assertions.
+- Reports run time for each test.
+- Tests continue even after an assertion fails.
+- Has assertion for checking float equality.
+- Released under the zlib license - free for nearly any use.
+
+##Example
 
     #include "minctest.h"
 
@@ -39,6 +49,6 @@ That produces the following output:
 
 
 
-##Hints:
+##Hints
      All functions/variables start with the letter 'l'.
 
