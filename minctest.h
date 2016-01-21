@@ -2,7 +2,7 @@
  *
  * MINCTEST - Minimal C Test Library - 0.1
  *
- * Copyright (c) 2014, 2015 Lewis Van Winkle
+ * Copyright (c) 2014, 2015, 2016 Lewis Van Winkle
  *
  * http://CodePlea.com
  *
@@ -109,18 +109,18 @@ static int lfails = 0;
 /* Assert two integers are equal. */
 #define lequal(a, b) do {\
     ++ltests;\
-    if (a != b) {\
+    if ((a) != (b)) {\
         ++lfails;\
-        printf("%s:%d (%d != %d)\n", __FILE__, __LINE__, a, b);\
+        printf("%s:%d (%d != %d)\n", __FILE__, __LINE__, (a), (b));\
     }} while (0)
 
 
 /* Assert two floats are equal (Within LTEST_FLOAT_TOLERANCE). */
 #define lfequal(a, b) do {\
     ++ltests;\
-    if (fabs((double)a-(double)b) > LTEST_FLOAT_TOLERANCE) {\
+    if (fabs((double)(a)-(double)(b)) > LTEST_FLOAT_TOLERANCE) {\
         ++lfails;\
-        printf("%s:%d (%f != %f)\n", __FILE__, __LINE__, (double)a, (double)b);\
+        printf("%s:%d (%f != %f)\n", __FILE__, __LINE__, (double)(a), (double)(b));\
     }} while (0)
 
 
