@@ -1,7 +1,7 @@
-#MINCTEST
+#Minctest
 
 
-MINCTEST is a very minimal unit-testing "framework" written in ANSI C and
+Minctest is a very minimal unit-testing "framework" written in ANSI C and
 implemented in a single header file. It's handy when you want some real simple
 unit tests for a small project.
 
