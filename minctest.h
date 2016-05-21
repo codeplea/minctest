@@ -1,6 +1,6 @@
 /*
  *
- * MINCTEST - Minimal C Test Library - 0.1
+ * MINCTEST - Minimal C Test Library - 0.1.1
  *
  * Copyright (c) 2014, 2015, 2016 Lewis Van Winkle
  *
@@ -65,7 +65,9 @@
 
 
 /* How far apart can floats be before we consider them unequal. */
+#ifndef LTEST_FLOAT_TOLERANCE
 #define LTEST_FLOAT_TOLERANCE 0.001
+#endif
 
 
 /* Track the number of passes, fails. */
