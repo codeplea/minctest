@@ -52,3 +52,13 @@ That produces the following output:
 ##Hints
      All functions/variables start with the letter 'l'.
 
+##Users
+
+Minctest is used in almost all of my C projects, including:
+
+* [TinyExpr - Math Expression Evaluation Library](https://codeplea.com/tinyexpr)
+* [Genann - Neural Network Library](https://codeplea.com/genann)
+
+You can check those out to see how Minctest is used in practice.
+
+If you're using Minctest in your project, let me know. I could add a link back.
