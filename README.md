@@ -58,6 +58,7 @@ That produces the following output:
 
 Minctest is used in almost all of my C projects, including:
 
+* [Tulip Indicators - Financial Technical Analysis Indicators](https://tulipindicators.org)
 * [TinyExpr - Math Expression Evaluation Library](https://codeplea.com/tinyexpr)
 * [Genann - Neural Network Library](https://codeplea.com/genann)
 
