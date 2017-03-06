@@ -62,6 +62,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include <string.h>
 
 
 /* How far apart can floats be before we consider them unequal. */
@@ -108,23 +109,29 @@ static int lfails = 0;
     }} while (0)
 
 
-/* Assert two integers are equal. */
-#define lequal(a, b) do {\
+/* Prototype to assert equal. */
+#define lequal_base(equality, a, b, format) do {\
     ++ltests;\
-    if ((a) != (b)) {\
+    if (!(equality)) {\
         ++lfails;\
-        printf("%s:%d (%d != %d)\n", __FILE__, __LINE__, (a), (b));\
+        printf("%s:%d ("format " != " format")\n", __FILE__, __LINE__, (a), (b));\
     }} while (0)
+
+
+/* Assert two integers are equal. */
+#define lequal(a, b)\
+    lequal_base((a) == (b), a, b, "%d")
 
 
 /* Assert two floats are equal (Within LTEST_FLOAT_TOLERANCE). */
-#define lfequal(a, b) do {\
-    ++ltests;\
-    const double __LF_COMPARE = fabs((double)(a)-(double)(b));\
-    if (__LF_COMPARE > LTEST_FLOAT_TOLERANCE || (__LF_COMPARE != __LF_COMPARE)) {\
-        ++lfails;\
-        printf("%s:%d (%f != %f)\n", __FILE__, __LINE__, (double)(a), (double)(b));\
-    }} while (0)
+#define lfequal(a, b)\
+    lequal_base(fabs((double)(a)-(double)(b)) <= LTEST_FLOAT_TOLERANCE\
+     && fabs((double)(a)-(double)(b)) == fabs((double)(a)-(double)(b)), (double)(a), (double)(b), "%f")
+
+
+/* Assert two strings are equal. */
+#define lsequal(a, b)\
+    lequal_base(strcmp(a, b) == 0, a, b, "%s")
 
 
 #endif /*__MINCTEST_H__*/
