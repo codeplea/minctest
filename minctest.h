@@ -62,6 +62,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include <string.h>
 
 
 /* How far apart can floats be before we consider them unequal. */
@@ -126,6 +127,11 @@ static int lfails = 0;
 #define lfequal(a, b)\
     lequal_base(fabs((double)(a)-(double)(b)) <= LTEST_FLOAT_TOLERANCE\
      && fabs((double)(a)-(double)(b)) == fabs((double)(a)-(double)(b)), (double)(a), (double)(b), "%f")
+
+
+/* Assert two strings are equal. */
+#define lsequal(a, b)\
+    lequal_base(strcmp(a, b) == 0, a, b, "%s")
 
 
 #endif /*__MINCTEST_H__*/

@@ -46,8 +46,8 @@ There is a [Lua port here.](https://github.com/codeplea/minctest-lua)
 That produces the following output:
 
             test1         pass: 1   fail: 0      0ms
-            test2         pass: 2   fail: 0      1ms
-    ALL TESTS PASSED (3/3)
+            test2         pass: 3   fail: 0      1ms
+    ALL TESTS PASSED (4/4)
 
 
 

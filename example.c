@@ -9,6 +9,7 @@ void test1() {
 void test2() {
     lequal(5, 5);
     lfequal(5.5, 5.5);
+    lsequal("abc", "abc");
 }
 
 int main(int argc, char *argv[])
@@ -18,4 +19,3 @@ int main(int argc, char *argv[])
     lresults();
     return lfails != 0;
 }
-
