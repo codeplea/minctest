@@ -1,8 +1,8 @@
 /*
  *
- * MINCTEST - Minimal C Test Library - 0.1.1
+ * MINCTEST - Minimal C Test Library - 0.2.0
  *
- * Copyright (c) 2014, 2015, 2016 Lewis Van Winkle
+ * Copyright (c) 2014-2017 Lewis Van Winkle
  *
  * http://CodePlea.com
  *
