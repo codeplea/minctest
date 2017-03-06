@@ -32,6 +32,7 @@ There is a [Lua port here.](https://github.com/codeplea/minctest-lua)
     void test2() {
         lequal(5, 5);
         lfequal(5.5, 5.5);
+        lsequal("abc", "abc");
     }
 
     int main(int argc, char *argv[])
