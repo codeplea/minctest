@@ -1,4 +1,4 @@
-#Minctest
+# Minctest
 
 
 Minctest is a very minimal unit-testing "framework" written in ANSI C and
@@ -11,7 +11,7 @@ failing test code was on.
 
 There is a [Lua port here.](https://github.com/codeplea/minctest-lua)
 
-##Features
+## Features
 
 - **ANSI C with no dependencies**.
 - Single header file.
@@ -21,7 +21,7 @@ There is a [Lua port here.](https://github.com/codeplea/minctest-lua)
 - Has assertion for checking float equality.
 - Released under the zlib license - free for nearly any use.
 
-##Example
+## Example
 
     #include "minctest.h"
 
@@ -52,10 +52,10 @@ That produces the following output:
 
 
 
-##Hints
+## Hints
      All functions/variables start with the letter 'l'.
 
-##Users
+## Users
 
 Minctest is used in almost all of my C projects, including:
 
