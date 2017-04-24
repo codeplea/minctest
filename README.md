@@ -9,7 +9,7 @@ Basically, it implements assertion and equal functions. It'll track and time
 how many tests pass and fail. Failed tests will also display which line the
 failing test code was on.
 
-There is a [Lua port here.](https://github.com/codeplea/minctest-lua)
+There is a [Node.js port here](https://github.com/codeplea/minctest-node) and a [Lua port here.](https://github.com/codeplea/minctest-lua)
 
 ## Features
 
