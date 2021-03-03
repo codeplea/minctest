@@ -13,7 +13,7 @@ There is a [Node.js port here](https://github.com/codeplea/minctest-node) and a 
 
 ## Features
 
-- **ANSI C with no dependencies**.
+- **C99 with no dependencies**.
 - Single header file.
 - Reports file and line number for failed assertions.
 - Reports run time for each test.
