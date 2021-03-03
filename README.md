@@ -46,8 +46,10 @@ There is a [Node.js port here](https://github.com/codeplea/minctest-node) and a 
 
 That produces the following output:
 
-            test1         pass: 1   fail: 0      0ms
-            test2         pass: 3   fail: 0      1ms
+            test1:
+             -- pass: 1                    fail: 0                    time: 12ms
+            test2:
+             -- pass: 3                    fail: 0                    time: 0ms
     ALL TESTS PASSED (4/4)
 
 

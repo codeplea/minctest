@@ -73,30 +73,30 @@
 
 /* Track the number of passes, fails. */
 /* NB this is made for all tests to be in one file. */
-static int ltests = 0;
-static int lfails = 0;
+static size_t ltests = 0;
+static size_t lfails = 0;
 
 
 /* Display the test results. */
 #define lresults() do {\
     if (lfails == 0) {\
-        printf("ALL TESTS PASSED (%d/%d)\n", ltests, ltests);\
+        printf("ALL TESTS PASSED (%zu/%zu)\n", ltests, ltests);\
     } else {\
-        printf("SOME TESTS FAILED (%d/%d)\n", ltests-lfails, ltests);\
+        printf("SOME TESTS FAILED (%zu/%zu)\n", ltests-lfails, ltests);\
     }\
 } while (0)
 
 
 /* Run a test. Name can be any string to print out, test is the function name to call. */
 #define lrun(name, test) do {\
-    const int ts = ltests;\
-    const int fs = lfails;\
+    const size_t ts = ltests;\
+    const size_t fs = lfails;\
     const clock_t start = clock();\
-    printf("\t%-14s", name);\
+    printf("\t%s:\n", name);\
     test();\
-    printf("pass:%2d   fail:%2d   %4dms\n",\
+    printf("\t -- pass: %-20zu fail: %-20zu time: %ldms\n",\
             (ltests-ts)-(lfails-fs), lfails-fs,\
-            (int)((clock() - start) * 1000 / CLOCKS_PER_SEC));\
+            (long)((clock() - start) * 1000 / CLOCKS_PER_SEC));\
 } while (0)
 
 
